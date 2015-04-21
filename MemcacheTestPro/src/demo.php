@@ -5,8 +5,9 @@
  * Date: 15/4/21
  * Time: 14:34
  */
-
 var_dump("start");
+require_once("../lib/memcache-2.2.6/memcache.php");
+
 $memcache = memcache_connect('10.66.108.24', 9101);
 
 if ($memcache) {
@@ -26,4 +27,5 @@ if ($memcache) {
 }
 else {
     echo "Connection to memcached failed";
-})
+}
+?>
