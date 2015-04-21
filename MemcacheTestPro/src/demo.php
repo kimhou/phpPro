@@ -5,7 +5,8 @@
  * Date: 15/4/21
  * Time: 14:34
  */
-var_dump("start<br/>");
+
+var_dump("start");
 $memcache = memcache_connect('10.66.108.24', 9101);
 
 if ($memcache) {

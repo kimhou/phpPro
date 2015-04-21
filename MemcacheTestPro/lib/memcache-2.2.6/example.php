@@ -1,6 +1,7 @@
 <?php
+var_dump("start");
 
-$memcache = memcache_connect('localhost', 11211);
+$memcache = memcache_connect('10.66.108.24', 9101);
 
 if ($memcache) {
 	$memcache->set("str_key", "String to store in memcached");
@@ -18,6 +19,7 @@ if ($memcache) {
 	var_dump($memcache->get('obj_key'));
 }
 else {
+    var_dump("memcache = null");
 	echo "Connection to memcached failed";
 }
 ?>
